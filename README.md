@@ -6,22 +6,20 @@ This is intended for use with [AdvantageKit](https://github.com/Mechanical-Advan
 
 An example commit message is shown below.
 
-> Update at "1/31/2022, 8:30:00 AM"
+> Deploy at "1/31/2022, 8:30:00 AM"
 
-## Installation
+Modified from 6328's source due to a bug that prevented the extension from working on windows.
+### Installation
+Use the .vsix file to manually install in vscode.
 
-The extension can be installed from the VSCode marketplace: https://marketplace.visualstudio.com/items?itemName=Mechanical-Advantage.event-deploy-wpilib
-
-Alternatively, it can be installed by cloning the repository to the VSCode extensions folder.
-
-### macOS/Linux
-
-```
-git clone "https://github.com/Mechanical-Advantage/EventDeployExtension.git" ~/.vscode/extensions/EventDeployExtension
-```
-
-### Windows
+### Updating Extension
+To update the extension ensure you have Node.js installed then run the following command to install vsce.
 
 ```
-git clone "https://github.com/Mechanical-Advantage/EventDeployExtension.git" %userprofile%\.vscode\extensions\EventDeployExtension
+npm install -g @vscode/vsce
+```
+
+With vsce installed, run the following command to generate a new .vsix file which can be used to update the extension in vscode.
+```
+vsce package
 ```
